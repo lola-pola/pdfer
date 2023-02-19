@@ -1,7 +1,7 @@
 import streamlit as st
 from pdferchanger import files_handler , file_lister , delete_files , translate
 import os
-
+import yaml
 
 def start():
     folders_name = ['-- Select --','game', 'sudoku', 'tictactoe','scramble','hangman']
@@ -49,16 +49,40 @@ def start():
 
         
 
-    
+import streamlit_authenticator as stauth
+with open('config.yaml') as file:
+    config = yaml.safe_load(file)
 
+authenticator = stauth.Authenticate(
+    config['credentials'],
+    config['cookie']['name'],
+    config['cookie']['key'],
+    config['cookie']['expiry_days'],
+    config['preauthorized']
+)
 st.title("Simple PDF Convert App")
-password = st.text_input('Enter Password', type='password')
-user = st.text_input('Enter Username')
-if st.button('Login'):
-    if user == 'admin' and password == os.getenv('UI_PASSWORD'):
-        st.success('Logged in successfully')
-        start()
-    else:
-        st.warning('Incorrect Username/Password')
+name, authentication_status, username = authenticator.login('Login', 'main')
+if authentication_status:
+    authenticator.logout('Logout', 'main')
+    st.write(f'Welcome *{name}*')
+    start()
+elif authentication_status is False:
+    st.error('Username/password is incorrect')
+elif authentication_status is None:
+    st.warning('Please enter your username and password')
+
+
+# st.title("Simple PDF Convert App")
+# user = st.text_input('Enter Username')
+# password = st.text_input('Enter Password', type='password')
+# lo = st.button('Login')
+# if lo:
+#     if user == 'admin':
+#         if password == os.getenv('UI_PASSWORD'):
+#             st.success('Logged in successfully')
+#             start()
+#     else:
+#         st.warning('Incorrect Username/Password')
+    
 
 
