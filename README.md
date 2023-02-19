@@ -1,6 +1,6 @@
 # pdfer
 
-[![Deployment Status](https://github.com/lola-pola/pdfer/actions/actions/workflows/pdfer.yml/badge.svg)]
+[![Deployment Status](https://github.com/lola-pola/pdfer/actions/actions/workflows/pdfer/badge.svg)]
 [![GitHub license](https://img.shields.io/github/license/lola-pola/pdfer.svg)](https://github.com/lola-pola/pdfer/blob/main/LICENSE)
 [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](http://pdfer-elhay.eastus.cloudapp.azure.com/)
 [![Docker Image Version (latest by date)](https://img.shields.io/docker/v/lolapola/pdfer?label=docker%20image)](https://hub.docker.com/r/lolapola/pdfer)
