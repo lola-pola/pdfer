@@ -1,9 +1,11 @@
 # pdfer
 
+[![Deployment Status](https://github.com/lola-pola/pdfer/actions/actions/workflows/pdfer.yml/badge.svg)](https://github.com/lola-pola/pdfer/actions/actions/workflows/pdfer.yml/badge.svg)
 [![GitHub license](https://img.shields.io/github/license/lola-pola/pdfer.svg)](https://github.com/lola-pola/pdfer/blob/main/LICENSE)
 [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](http://pdfer-elhay.eastus.cloudapp.azure.com/)
-![Deployment Status](https://github.com/lola-pola/pdfer/actions/actions/workflows/pdfer.yml/badge.svg)
-
+[![Docker Image Version (latest by date)](https://img.shields.io/docker/v/lolapola/pdfer?label=docker%20image)](https://hub.docker.com/r/lolapola/pdfer)
+[![Docker Pulls](https://img.shields.io/docker/pulls/lolapola/pdfer)](https://hub.docker.com/r/lolapola/pdfer)
+[![Helm Chart](https://img.shields.io/badge/helm-chart-blue)](https://lola-pola.github.io/pdfer/)
 ## Description
 
 pdfer is a Streamlit application that allows you to upload files and convert them to PDF format. The application is built using Python and the following libraries:
