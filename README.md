@@ -1,10 +1,9 @@
 # pdfer
 
 
-[![pdfer](https://github.com/lola-pola/pdfer/actions/workflows/pdfer.yaml/badge.svg)](https://github.com/lola-pola/pdfer/actions/workflows/pdfer.yaml)
-[![Deployment Status](https://github.com/lola-pola/pdfer/actions/actions/workflows/pdfer/badge.svg)]
+[![Deployment Status](https://github.com/lola-pola/pdfer/actions/workflows/pdfer.yaml/badge.svg)](https://github.com/lola-pola/pdfer/actions/workflows/pdfer.yaml)
 [![GitHub license](https://img.shields.io/github/license/lola-pola/pdfer.svg)](https://github.com/lola-pola/pdfer/blob/main/LICENSE)
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](http://pdfer-elhay.eastus.cloudapp.azure.com/)
+[![ACCESS TO APP Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](http://pdfer-elhay.eastus.cloudapp.azure.com/)
 [![Docker Image Version (latest by date)](https://img.shields.io/docker/v/lolapola/pdfer?label=docker%20image)](https://hub.docker.com/r/lolapola/pdfer)
 [![Docker Pulls](https://img.shields.io/docker/pulls/lolapola/pdfer)](https://hub.docker.com/r/lolapola/pdfer)
 [![Helm Chart](https://img.shields.io/badge/helm-chart-blue)](https://lola-pola.github.io/pdfer/)
