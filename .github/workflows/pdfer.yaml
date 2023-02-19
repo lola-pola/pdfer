@@ -57,4 +57,4 @@ jobs:
                 resource-group: ${{ env.CLUSTER_RESOURCE_GROUP }}
                 use-kubelogin: "true"
             - name: Deploy application
-              run: helm upgrade -i -f ${{ env.CHART_OVERRIDE_PATH }} automated-pdfer ${{ env.CHART_PATH }} --set keyazureml=${{ secrets.KEY_AZURE_TRANSLATE }} --set keyforui=${{ secrets.PASSWORD }} --set ${{ env.CHART_OVERRIDES }}
+              run: helm upgrade -i -f ${{ env.CHART_OVERRIDE_PATH }} automated-pdfer ${{ env.CHART_PATH }} --set keytranslate=${{ secrets.KEY_AZURE_TRANSLATE }} --set keyforui=${{ secrets.PASSWORD }} --set ${{ env.CHART_OVERRIDES }}
