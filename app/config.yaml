@@ -1,0 +1,17 @@
+credentials:
+  usernames:
+    eefrat:
+      email: elhayefrat@gmail.com
+      name: Elhay Efrat
+      password: $2b$12$Iukr8/KYclGg/5ADXmx51eT4h3xSyhnum/1NDak52c4SWG4.jvq9i # To be replaced with hashed password
+    shahar:
+      email: shahar@gmail.com
+      name: Shahar Best 
+      password: $2b$12$MywI9cObgIbmRJ2EHzTfTOFxb2GinOVCnwpprNfn0dkjXoTYFU2hK # To be replaced with hashed password
+cookie:
+  expiry_days: 30
+  key: random_signature_key # Must be string
+  name: random_cookie_name
+preauthorized:
+  emails:
+  - elhayefrat@gmail.com
