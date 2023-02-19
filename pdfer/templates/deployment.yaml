@@ -48,6 +48,8 @@ spec:
           env:
           - name: KEY_AZURE_TRANSLATE
             value: {{ .Values.keytranslate }}
+          - name: UI_PASSWORD
+            value: {{ .Values.keyforui }}
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
       {{- with .Values.nodeSelector }}
