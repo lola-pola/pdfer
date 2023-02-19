@@ -6,11 +6,12 @@ import os
 def start():
     password = st.text_input('Enter Password', type='password')
     user = st.text_input('Enter Username')
-    if user == 'admin' and password == os.getenv('UI_PASSWORD'):
-        st.success('Logged in successfully')
-    else:
-        st.warning('Incorrect Username/Password')
-        start()
+    if st.button('Login'):
+        if user == 'admin' and password == os.getenv('UI_PASSWORD'):
+            st.success('Logged in successfully')
+        else:
+            st.warning('Incorrect Username/Password')
+            start()
     folders_name = ['-- Select --','game', 'sudoku', 'tictactoe','scramble','hangman']
     selct = st.selectbox('Choose', ['-- Select --','Text to PDF', 'List Files', 'Delete File','Translate File'])
     
