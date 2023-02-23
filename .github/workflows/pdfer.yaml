@@ -5,13 +5,13 @@ name: pdfer
             - main
     workflow_dispatch: {}
 env:
-    ACR_RESOURCE_GROUP: atera-k8s-demo
-    AZURE_CONTAINER_REGISTRY: atera
+    ACR_RESOURCE_GROUP: elhays
+    AZURE_CONTAINER_REGISTRY: databasecni
     CHART_OVERRIDE_PATH: ./pdfer/values.yaml
-    CHART_OVERRIDES: image.repository=atera.azurecr.io/pdfer,image.tag=${{ github.sha }}
+    CHART_OVERRIDES: image.repository=databasecni.azurecr.io/pdfer,image.tag=${{ github.sha }}
     CHART_PATH: ./pdfer
-    CLUSTER_NAME: atera-k8s-demo
-    CLUSTER_RESOURCE_GROUP: atera-k8s-demo
+    CLUSTER_NAME: database-cni
+    CLUSTER_RESOURCE_GROUP: elhays
     CONTAINER_NAME: pdfer
 jobs:
     buildImage:
@@ -57,4 +57,4 @@ jobs:
                 resource-group: ${{ env.CLUSTER_RESOURCE_GROUP }}
                 use-kubelogin: "true"
             - name: Deploy application
-              run: helm upgrade -i -f ${{ env.CHART_OVERRIDE_PATH }} automated-pdfer ${{ env.CHART_PATH }} --set keytranslate=${{ secrets.KEY_AZURE_TRANSLATE }} --set keyforui=${{ secrets.PASSWORD }} --set ${{ env.CHART_OVERRIDES }}
+              run: helm upgrade --wait -i -f ${{ env.CHART_OVERRIDE_PATH }} --set ${{ env.CHART_OVERRIDES }} automated-deployment ${{ env.CHART_PATH }}
