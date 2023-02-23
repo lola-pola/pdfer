@@ -5,7 +5,7 @@
 replicaCount: 1
 
 image:
-  repository: pdfers
+  repository: pdfer
   pullPolicy: Always
   # Overrides the image tag whose default is the chart appVersion.
   tag: "1"
@@ -40,7 +40,7 @@ keyforui: 'TBD'
 
 
 service:
-  dnsName: pdfer-elhay
+  dnsName: pdfer-elhaysss
   type: LoadBalancer
   port: 80
 
