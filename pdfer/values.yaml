@@ -40,7 +40,7 @@ keyforui: 'TBD'
 
 
 service:
-  dnsName: pdfer-elhaysss
+  dnsName: pdfer-eg
   type: LoadBalancer
   port: 80
 
